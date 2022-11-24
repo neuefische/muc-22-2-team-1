@@ -16,6 +16,6 @@ class TodoServiceTest {
         String result = todoService.helloWorld();
 
         //THEN
-        assertEquals("Hello world", result);
+        assertEquals("Hello World", result);
     }
 }
