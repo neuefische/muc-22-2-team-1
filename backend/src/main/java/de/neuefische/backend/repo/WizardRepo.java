@@ -39,27 +39,8 @@ public class WizardRepo {
         return wizards;
     }
 
-    public void setWizards(List<Wizard> wizards) {
-        this.wizards = wizards;
-    }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        WizardRepo that = (WizardRepo) o;
-        return Objects.equals(wizards, that.wizards);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(wizards);
-    }
 
-    @Override
-    public String toString() {
-        return "WizardRepo{" +
-                "wizards=" + wizards +
-                '}';
-    }
+
 }
