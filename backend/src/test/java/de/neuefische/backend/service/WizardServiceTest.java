@@ -5,35 +5,27 @@ import de.neuefische.backend.repo.WizardRepo;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.ArrayList;
 import java.util.List;
+import static org.mockito.Mockito.*;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class WizardServiceTest {
 
+
+    WizardRepo wizardRepo = mock(WizardRepo.class);
+    IdService idService = mock(IdService.class);
+    WizardService wizardService = new WizardService(wizardRepo,idService);
     @Test
-    void listOfWizardsRepoTest() {
+    void listOfWizardExpectEmptyList() {
         //Given
-        WizardRepo wizardRepo = new WizardRepo();
-        IdService idService = new IdService();
-        WizardService wizardService = new WizardService(wizardRepo, idService);
+        List<Wizard> explist= new ArrayList<>();
 
-        //When
-        List<Wizard> actual = List.of(
-                new Wizard("1", "Harry", "male", "brave", "keramikpause", "cooperativ"),
-                new Wizard("2", "Martin", "divers", "mutig", "witzig", "groß")
-        );
+        List<Wizard> result = wizardService.list();
 
-        //then
-        List<Wizard> expected = List.of(
-                new Wizard("1", "Harry", "male", "brave", "keramikpause", "cooperativ"),
-                new Wizard("2", "Martin", "divers", "mutig", "witzig", "groß")
-        );
-        assertEquals(expected, actual);
-        //assertThat(actual)
-        //        .hasSameElementsAs(expected)
-        //        .hasSize(expected.size());
+        assertEquals(explist,result);
     }
 
     @Test
