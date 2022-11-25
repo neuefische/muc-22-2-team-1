@@ -34,6 +34,15 @@ class WizardServiceTest {
 
     @Test
     void addWizard() {
+        Wizard givenWizard= new Wizard("1","aaa","aaa","sss","bbb","ddd");
+
+        when(wizardRepo.add(givenWizard)).thenReturn(givenWizard);
+        Wizard result = wizardService.addWizard(givenWizard);
+
+        assertEquals(givenWizard,result);
+        verify(wizardRepo).add(givenWizard);
+
+
     }
 
     @Test

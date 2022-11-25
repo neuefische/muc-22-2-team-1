@@ -35,9 +35,9 @@ public class WizardService {
 
 
     public Wizard addWizard(Wizard wizard){
-        String id = IdService.generateId();
-        Wizard wizardWithId = wizard.withId(id);
-        return wizardRepo.add(wizardWithId);
+      //  String id = IdService.generateId();
+      //  Wizard wizardWithId = wizard.withId(id);
+        return wizardRepo.add(wizard);
     }
 
     public List<Wizard> search(String s){
