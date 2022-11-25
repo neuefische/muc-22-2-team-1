@@ -20,7 +20,7 @@ public class WizardRepo {
 
     public Optional<Wizard> findById(String id){
         for (Wizard wizard: wizards){
-            if (wizard.getId().equals(id)){
+            if (wizard.id().equals(id)){
                 return Optional.of(wizard);
             }
         }
@@ -39,8 +39,6 @@ public class WizardRepo {
         return wizards;
     }
 
-
-
-
-
+    public WizardRepo() {
+    }
 }
