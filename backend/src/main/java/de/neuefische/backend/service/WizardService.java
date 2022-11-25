@@ -33,15 +33,17 @@ public class WizardService {
         throw new IllegalAccessException("Id not found");
     }
 
+
     public Wizard addWizard(Wizard wizard){
-        wizard.setId(IdService.generateId());
-        return wizardRepo.add(wizard);
+        String id = IdService.generateId();
+        Wizard wizardWithId = wizard.withId(id);
+        return wizardRepo.add(wizardWithId);
     }
 
     public List<Wizard> search(String s){
         List<Wizard> searchResultList = new ArrayList<>();
         for (Wizard wizard: list()){
-            if (wizard.getName().contains(s)){
+            if (wizard.name().contains(s)){
                 searchResultList.add(wizard);
             }
         }
