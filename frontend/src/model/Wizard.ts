@@ -7,6 +7,10 @@ export type Wizard = {
     attribute3: Attribute3
 }
 
+export type NewWizard = {
+    name: string
+}
+
 export enum Gender {
     WITCHER = "WITCHER",
     WITCH = "WITCH",
