@@ -1,10 +1,10 @@
 export type Wizard = {
-    id:string,
-    name:string,
-    gender:Gender,
-    attribute1:string,
-    attribute2:string,
-    attribute3:string
+    id: string,
+    name: string,
+    gender: Gender,
+    attribute1: Attribute1,
+    attribute2: Attribute2,
+    attribute3: Attribute3
 }
 
 export enum Gender {
@@ -16,3 +16,24 @@ export enum Gender {
 
 }
 
+
+export enum Attribute1 {
+    HIGHIQ = "highIQ",
+    BRAVE = "brave",
+    FAITHFUL = "faithful",
+    HIGHAMBITION = "highambition"
+}
+
+export enum Attribute2 {
+    CREATIV = "creativ",
+    COURAGE = "courage",
+    JUST = "just",
+    POWERHUNGRY = "power hungry"
+}
+
+export enum Attribute3 {
+    INDIVIDUELL = "individuell",
+    DETERMINATION = "determination",
+    COOPERATIVE = "cooperativ",
+    CRACED = "craced"
+}
