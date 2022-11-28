@@ -3,10 +3,14 @@ package de.neuefische.backend.service;
 import de.neuefische.backend.model.Wizard;
 import de.neuefische.backend.repo.WizardRepo;
 import org.junit.jupiter.api.Test;
+
+import static de.neuefische.backend.service.IdService.generateId;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
 import static org.mockito.Mockito.*;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -29,11 +33,16 @@ class WizardServiceTest {
     }
 
     @Test
-    void findById() {
+    void findById() throws IllegalAccessException {
+
+
+        
     }
 
     @Test
     void addWizard() {
+
+        
         Wizard givenWizard= new Wizard("1","aaa","aaa","sss","bbb","ddd");
 
         when(wizardRepo.add(givenWizard)).thenReturn(givenWizard);
@@ -44,9 +53,13 @@ class WizardServiceTest {
 
 
     }
+    
+    
 
     @Test
     void search() {
+        
+        
     }
 
     @Test
