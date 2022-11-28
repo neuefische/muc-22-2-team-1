@@ -23,27 +23,29 @@ public class WizardService {
         this.idService = idService;
     }
 
-    public List<Wizard> list(){return wizardRepo.getWizards();}
+    public List<Wizard> list() {
+        return wizardRepo.getWizards();
+    }
 
     public Wizard findById(String id) throws IllegalAccessException {
-        Optional<Wizard> optionalWizard= wizardRepo.findById(id);
-        if (optionalWizard.isPresent()){
+        Optional<Wizard> optionalWizard = wizardRepo.findById(id);
+        if (optionalWizard.isPresent()) {
             return optionalWizard.get();
         }
         throw new IllegalAccessException("Id not found");
     }
 
 
-    public Wizard addWizard(Wizard wizard){
-      //  String id = IdService.generateId();
-      //  Wizard wizardWithId = wizard.withId(id);
-        return wizardRepo.add(wizard);
+    public Wizard addWizard(Wizard wizard) {
+        String id = idService.generateId();
+        Wizard wizardWithId = wizard.withId(id);
+        return wizardRepo.add(wizardWithId);
     }
 
-    public List<Wizard> search(String s){
+    public List<Wizard> search(String s) {
         List<Wizard> searchResultList = new ArrayList<>();
-        for (Wizard wizard: list()){
-            if (wizard.name().contains(s)){
+        for (Wizard wizard : list()) {
+            if (wizard.name().contains(s)) {
                 searchResultList.add(wizard);
             }
         }
