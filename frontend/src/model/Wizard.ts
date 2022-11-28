@@ -35,5 +35,5 @@ export enum Attribute3 {
     INDIVIDUELL = "individuell",
     DETERMINATION = "determination",
     COOPERATIVE = "cooperativ",
-    CRACED = "craced"
+    CUNNING = "cunning"
 }
