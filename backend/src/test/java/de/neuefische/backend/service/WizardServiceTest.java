@@ -52,10 +52,10 @@ class WizardServiceTest {
         Wizard givenWizard= new Wizard("testId","aaa","aaa","sss","bbb","ddd");
 
         when(idService.generateId()).thenReturn("testId");
-        when(wizardRepo.add(givenWizard)).thenReturn(givenWizard);
+        when(wizardRepo.save(givenWizard)).thenReturn(givenWizard);
         Wizard result = wizardService.addWizard(givenWizard);
 
-        verify(wizardRepo).add(givenWizard);
+        verify(wizardRepo).save(givenWizard);
         assertEquals(givenWizard,result);
     }
 
