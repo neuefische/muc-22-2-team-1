@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Objects;
 
 @With
-@Document("studentDB")
+@Document("wizardsDB")
 public record Wizard(
         @Id
         String id,
