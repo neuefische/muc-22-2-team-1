@@ -24,7 +24,7 @@ public class WizardService {
     }
 
     public List<Wizard> list() {
-        return wizardRepo.getWizards();
+        return wizardRepo.findAll();
     }
 
     public Wizard findById(String id) throws IllegalAccessException {
@@ -39,7 +39,7 @@ public class WizardService {
     public Wizard addWizard(Wizard wizard) {
         String id = idService.generateId();
         Wizard wizardWithId = wizard.withId(id);
-        return wizardRepo.add(wizardWithId);
+        return wizardRepo.save(wizardWithId);
     }
 
     public List<Wizard> search(String s) {
