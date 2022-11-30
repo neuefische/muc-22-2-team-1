@@ -1,10 +1,12 @@
 package de.neuefische.backend.model;
 import lombok.With;
+import org.springframework.data.annotation.Id;
 
 import java.util.Objects;
 
 @With
 public record Wizard(
+        @Id
         String id,
          String name,
          String gender,
