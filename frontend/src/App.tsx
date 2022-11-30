@@ -1,11 +1,17 @@
 import React from 'react';
 import './App.css';
 import WizardApp from './components/WizardApp';
+import WizardApp from './components/WizardApp';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import NavigationBar from "./components/NavigationBar";
 
 
 function App() {
+  return (
+    <div className="App">
+      <div><WizardApp></WizardApp></div>
+    </div>
+  );
     return (
         <div>
             <BrowserRouter>
