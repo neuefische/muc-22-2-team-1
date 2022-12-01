@@ -19,7 +19,9 @@ export default function useWizards(){
     }
 
     function addWizard(newWizard: NewWizard) {
+
         return axios.post("/wizard-students", newWizard)
+
             .then(response => response.data)
             .then((savedWizard) => setWizards(prevState => [...prevState,savedWizard]))
             .catch(console.error)
