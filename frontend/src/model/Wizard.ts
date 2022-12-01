@@ -17,7 +17,6 @@ export enum Gender {
     MUGGLE = "MUGGLE",
     HALFBLOOD = "HALFBLOOD",
     SQUIB = "SQUIB"
-
 }
 
 
