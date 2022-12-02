@@ -4,9 +4,9 @@ export default function NavigationBar(){
 
     return (
         <div>
-            <NavLink to={"/"}>Startseite</NavLink>
-            <NavLink to={"/home"}>Home</NavLink>
-            <NavLink to={"/wizards"}>Wizards</NavLink>
+            <NavLink to={"/"}>Home</NavLink>
+            <NavLink to={"/speaking-hat"}>Speaking Hat</NavLink>
+            <NavLink to={"/wizard-gallery"}>Wizard Gallery</NavLink>
         </div>
     )
 }

@@ -17,9 +17,9 @@ function App() {
               <NavigationBar/>
 
               <Routes>
-                  <Route path={""} element={<WizardApp/>}> </Route>
-                  <Route path={"/Startseite"} element={<p>Wizard Welt</p>}> </Route>
-                  <Route path={"/wizards"} element={<div>Galery</div>}> </Route>
+                  <Route path={""} element={<div>Hello Wizards</div>}> </Route>
+                  <Route path={"/speaking-hat"} element={<WizardApp/>}> </Route>
+                  <Route path={"/wizard-gallery"} element={<div>Wizard Gallery</div>}> </Route>
               </Routes>
 
           </BrowserRouter>
