@@ -31,8 +31,8 @@ export default function useWizards(){
         axios.delete(`/wizard-students/${id}`)
             .then(()=> {
                 setWizards(prevState => {
-                    return prevState.filter((wizard) => wizard.id ! == id
-                    )
+                    const listWithoutDeletetWizards= prevState.filter((wizard) => wizard.id !== id)
+                    return listWithoutDeletetWizards
                 })
             })
     }

@@ -47,6 +47,7 @@ export default function WizardCard(props: WizardCardProps) {
                     <li>{props.wizard.attribute2}</li>
                     <li>{props.wizard.attribute3}</li>
                 </ul>
+                <button  onClick={onDeleteClick}>Delete</button>
             </main>
         </div>
     )
