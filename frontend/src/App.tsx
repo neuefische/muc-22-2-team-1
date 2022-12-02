@@ -11,21 +11,20 @@ function App() {
     <div className="App">
       <div><WizardApp></WizardApp></div>
     </div>
-  );
-    return (
-        <div>
-            <BrowserRouter>
-                <NavigationBar/>
+  
+      <div>
+          <BrowserRouter>
+              <NavigationBar/>
 
-                <Routes>
-                    <Route path={""} element={<WizardApp/>}> </Route>
-                    <Route path={"/Startseite"} element={<p>Wizard Welt</p>}> </Route>
-                    <Route path={"/wizards"} element={<div>Galery</div>}> </Route>
-                </Routes>
+              <Routes>
+                  <Route path={""} element={<WizardApp/>}> </Route>
+                  <Route path={"/Startseite"} element={<p>Wizard Welt</p>}> </Route>
+                  <Route path={"/wizards"} element={<div>Galery</div>}> </Route>
+              </Routes>
 
-            </BrowserRouter>
+          </BrowserRouter>
 
-        </div>
+      </div>
     );
 }
 
