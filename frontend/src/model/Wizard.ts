@@ -21,10 +21,10 @@ export enum Gender {
 
 
 export enum Attribute1 {
-    HIGHIQ = "highIQ",
+    HIGHIQ = "high IQ",
     BRAVE = "brave",
     FAITHFUL = "faithful",
-    HIGHAMBITION = "highambition"
+    HIGHAMBITION = "high ambition"
 }
 
 export enum Attribute2 {

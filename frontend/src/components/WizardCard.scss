@@ -13,96 +13,115 @@ $rave-color-2: #946b2d;
 $huff-color-1: #ecb939;
 $huff-color-2: #726255;
 
-.card {
-    font-family: 'Harry Potter', sans-serif;
-    background-color: white;
-    border: 1px solid #e9e9e9;
-    max-width: 300px;
-    display: inline-flex;
-    flex-direction: column;
-    margin: 5px;
-    position: relative;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+$card-color: #393a75;
 
-&.gryffindor {
-     border: 1px solid $grif-color-2;
- }
-&.slytherin {
-     border: 1px solid $slit-color-2;
- }
-&.ravenclaw {
-     border: 1px solid $rave-color-2;
- }
-&.hufflepuff {
-     border: 1px solid $huff-color-2;
- }
+.card {
+  font-family: 'Harry Potter', sans-serif;
+  width: 500px;
+  display: inline-block;
+  margin: 8px;
+  position: relative;
 }
 
 .wizardImage {
-    display: flex;
-    flex-grow: 0;
-    align-items: center;
-    justify-content: center;
-    background: #efefef;
+  position: relative;
+  aspect-ratio: 2/1.86;
 
-&.gryffindor {
-     background: $grif-color-1;
- }
-&.slytherin {
-     background-color: $slit-color-1;
- }
+  .wizardImageBackground {
+    position: absolute;
+    top: 1%;
+    left: 3%;
+    width: 94%;
 
-&.ravenclaw {
-     background-color: $rave-color-1;
- }
-&.hufflepuff {
-     background-color: $huff-color-1;
- }
+    .gryffindor & {
+      fill: $grif-color-1;
+    }
 
-img {
+    .slytherin & {
+      fill: $slit-color-1;
+    }
+
+    .ravenclaw & {
+      fill: $rave-color-1;
+    }
+
+    .hufflepuff & {
+      fill: $huff-color-1;
+    }
+  }
+
+  .wizardAvatar {
+    position: absolute;
     height: auto;
-    width: 30%;
-    margin: 20px auto;
-    border-radius: 50%;
-}
+    width: 35%;
+    top: 0;
+    left: 50%;
+    transform: translate3d(-50%, 240px, 0);
+    filter: drop-shadow(0 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+  }
+
+  .wizardCardShowoff {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .wizardData {
-    padding: 12px;
-    text-align: center;
-    color: rgb(102, 102, 102);
+  padding: 12px;
+  text-align: center;
+  color: rgb(102, 102, 102);
+  border: 8px solid $card-color;
+  background: #efe66f;
+  width: 54.5%;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
 
-&.gryffindor {
-     color: $grif-color-2;
- }
+  .gryffindor & {
+    color: $grif-color-1;
+  }
 
-&.slytherin {
-     color: $slit-color-1;
- }
+  .slytherin & {
+    color: $slit-color-1;
+  }
 
-&.ravenclaw {
-     color: $rave-color-1;
- }
-&.hufflepuff {
-     color: $huff-color-2;
- }
+  .ravenclaw & {
+    color: $rave-color-1;
+  }
+
+  .hufflepuff & {
+    color: $huff-color-1;
+  }
 }
 
 .wizardName {
-    margin: 0 0 12px;
-    padding: 0;
+  margin: 8px 0 4px;
+  padding: 0;
+  font-size: 26px;
 }
 
 .wizardGender {
-    font-family: 'Harry Potter', sans-serif;
+  font-family: 'Harry Potter', sans-serif;
+  // text-transform: lowercase;
+  margin: 6px auto;
+  position: absolute;
+  top: -62px;
+  font-size: 14px;
+  transform: translate3d(-50%, 0, 0);
+  left: 50%;
+  color: $card-color;
 }
 
 .wizardAttributes {
-    margin: 0;
-    padding: 0 0 20px;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-li {
-    padding-top: 4px;
-}
+  li {
+    padding: 4px;
+    display: inline-block;
+  }
 }
