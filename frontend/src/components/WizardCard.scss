@@ -13,16 +13,28 @@ $huff-color-2: #726255;
 
 $card-color: #393a75;
 
+.box {
+  display: inline-block;
+}
+
 .card {
   font-family: "Times New Roman", Garamond, serif;
-  width: 450px;
-  height: 580px;
-  display: inline-block;
+  width: 350px;
+  height: 350px;
+  display: block;
   margin: 8px;
-  perspective: 1000px;
+  transition: transform 0.6s;
+  transform: scale(1) translateY(0);
+  z-index: 1;
+  position: relative;
 
-  &.card-flipped .card-inner {
-    transform: rotateY(180deg);
+  &.card-flipped {
+    transform: scale(1.5) translateY(-15%);
+    z-index: 10;
+
+    .card-inner {
+      transform: rotateY(180deg);
+    }
   }
 
   &-inner {
@@ -77,9 +89,9 @@ $card-color: #393a75;
     position: absolute;
     height: auto;
     width: 35%;
-    top: 0;
+    bottom: 0;
     left: 50%;
-    transform: translate3d(-50%, 220px, 0);
+    transform: translate3d(-50%, -36px, 0);
     filter: drop-shadow(0 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
   }
 
@@ -92,51 +104,23 @@ $card-color: #393a75;
   }
 }
 
-.wizardData {
-  padding: 12px;
-  text-align: center;
-  color: rgb(102, 102, 102);
-  border: 8px solid $card-color;
-  background: #efe66f;
-  width: 54.5%;
-  margin: 0 auto;
-  z-index: 2;
-  position: relative;
-  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
-
-  .gryffindor & {
-    color: $grif-color-1;
-  }
-
-  .slytherin & {
-    color: $slit-color-1;
-  }
-
-  .ravenclaw & {
-    color: $rave-color-1;
-  }
-
-  .hufflepuff & {
-    color: $huff-color-1;
-  }
-}
-
 .wizardName {
   .card-front & {
     padding: 0 4px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 18px;
     position: absolute;
-    bottom: 13px;
-    left: 152px;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 140px;
   }
 
   .card-back & {
-    font-size: 22px;
+    font-size: 18px;
     position: absolute;
     font-weight: bold;
-    top: 165px;
+    top: 40%;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -144,18 +128,20 @@ $card-color: #393a75;
 }
 
 .wizardGender {
-  font-size: 22px;
+  font-size: 16px;
+  backface-visibility: hidden;
   position: absolute;
-  top: 130px;
+  top: 32%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateZ(0);
   color: white;
 }
 
 .wizardAttributes {
-  font-size: 22px;
+  font-size: 18px;
+  line-height: 12px;
   position: absolute;
-  top: 225px;
+  top: 54%;
   left: 50%;
   transform: translateX(-50%);
   color: white;
