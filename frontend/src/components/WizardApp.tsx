@@ -3,12 +3,11 @@ import useWizards from "../hooks/useWizards";
 import AddWizard from "./AddWizard";
 import WizardGallery from "./WizardGallery";
 import SortingHat from "./SortingHat";
-
+import Houses from "./Houses";
 
 export default function WizardApp() {
 
     const {wizards, addWizard, removeWizard} = useWizards()
-
 
     return (
         <div>
@@ -19,6 +18,7 @@ export default function WizardApp() {
                 <Grid container spacing={2}>
                 <WizardGallery wizards={wizards} removeWizard={removeWizard}/>
                 <SortingHat/>
+                    <Houses/>
                 </Grid>
             </Container>
         </div>
