@@ -11,10 +11,10 @@ export type Wizard = {
 
 export type NewWizard = {
     name: string,
-    gender?: Gender,
-    attribute1?: Attribute1,
-    attribute2?: Attribute2,
-    attribute3?: Attribute3
+    gender: Gender | string,
+    attribute1: Attribute1 | string,
+    attribute2: Attribute2 | string,
+    attribute3: Attribute3 | string,
 }
 
 export enum Gender {
@@ -33,15 +33,15 @@ export enum Attribute1 {
 }
 
 export enum Attribute2 {
-    CREATIV = "creativ",
-    COURAGE = "courage",
-    JUST = "just",
-    POWERHUNGRY = "power hungry"
+    TAPFER = "tapfer",
+    TREU = "treu",
+    KREATIV = "kreativ",
+    SELBSTBEWUSST = "selbstbewusst"
 }
 
 export enum Attribute3 {
-    INDIVIDUELL = "individuell",
-    DETERMINATION = "determination",
-    COOPERATIVE = "cooperativ",
-    CUNNING = "cunning"
+    ENTSCHLOSSEN = "entschlossen",
+    FLEISSIG = "fleißig",
+    INTROVERTIERT = "introvertiert",
+    REBELLISCH = "rebellisch"
 }
