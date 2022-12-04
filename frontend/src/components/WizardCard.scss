@@ -17,10 +17,35 @@ $card-color: #393a75;
 
 .card {
   font-family: 'Harry Potter', sans-serif;
-  width: 500px;
+  width: 450px;
+height: 580px;
   display: inline-block;
   margin: 8px;
-  position: relative;
+  perspective: 1000px;
+
+  &.card-flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  &-inner {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  &-front, &-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  &-back {
+    transform: rotateY(180deg);
+  }
 }
 
 .wizardImage {
@@ -56,7 +81,7 @@ $card-color: #393a75;
     width: 35%;
     top: 0;
     left: 50%;
-    transform: translate3d(-50%, 240px, 0);
+    transform: translate3d(-50%, 220px, 0);
     filter: drop-shadow(0 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
   }
 
@@ -65,6 +90,7 @@ $card-color: #393a75;
     position: absolute;
     top: 0;
     left: 0;
+    filter: drop-shadow(0 0.35rem 0.2rem rgba(0, 0, 0, 0.5));
   }
 }
 
@@ -98,9 +124,14 @@ $card-color: #393a75;
 }
 
 .wizardName {
-  margin: 8px 0 4px;
-  padding: 0;
-  font-size: 26px;
+  font-family: "Times New Roman", Garamond, serif;
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  position: absolute;
+  bottom: 13px;
+  left: 152px;
+  width: 140px;
 }
 
 .wizardGender {

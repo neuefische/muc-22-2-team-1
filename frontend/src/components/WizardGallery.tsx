@@ -20,7 +20,7 @@ export default function WizardGallery(props: WizardGalleryProps) {
         <div>
             <input placeholder={"Search"} value={searchText} onChange={onSearchChange}/>
             <section>
-                {filteredWizards.map(wizard => <WizardCard wizard={wizard} key={wizard.id}
+                {filteredWizards.reverse().map(wizard => <WizardCard wizard={wizard} key={wizard.id}
                     removeWizard = {props.removeWizard}/>)}
             </section>
         </div>
