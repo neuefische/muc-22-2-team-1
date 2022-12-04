@@ -1,5 +1,3 @@
-@import url('https://fonts.cdnfonts.com/css/harry-potter');
-
 /*----- ----- ALL OF BACKGROUND COLORS ----- -----*/
 $grif-color-1: #740001;
 $grif-color-2: #d3a625;
@@ -16,9 +14,9 @@ $huff-color-2: #726255;
 $card-color: #393a75;
 
 .card {
-  font-family: 'Harry Potter', sans-serif;
+  font-family: "Times New Roman", Garamond, serif;
   width: 450px;
-height: 580px;
+  height: 580px;
   display: inline-block;
   margin: 8px;
   perspective: 1000px;
@@ -33,7 +31,6 @@ height: 580px;
     position: relative;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    transform: rotateY(180deg);
   }
 
   &-front, &-back {
@@ -125,34 +122,46 @@ height: 580px;
 }
 
 .wizardName {
-  font-family: "Times New Roman", Garamond, serif;
-  padding: 0 4px;
-  font-size: 14px;
-  line-height: 18px;
-  position: absolute;
-  bottom: 13px;
-  left: 152px;
-  width: 140px;
+  .card-front & {
+    padding: 0 4px;
+    font-size: 14px;
+    line-height: 18px;
+    position: absolute;
+    bottom: 13px;
+    left: 152px;
+    width: 140px;
+  }
+
+  .card-back & {
+    font-size: 22px;
+    position: absolute;
+    font-weight: bold;
+    top: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+  }
 }
 
 .wizardGender {
-  font-family: "Times New Roman", Garamond, serif;
-  font-size: 24px;
+  font-size: 22px;
   position: absolute;
- top: 150px;
+  top: 130px;
   left: 50%;
   transform: translateX(-50%);
-  color: gold;
+  color: white;
 }
 
 .wizardAttributes {
-  font-family: "Times New Roman", Garamond, serif;
-  font-size: 28px;
+  font-size: 22px;
   position: absolute;
-  top: 190px;
+  top: 225px;
   left: 50%;
   transform: translateX(-50%);
-  color: gold;
+  color: white;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 
   li {
     padding: 4px;
