@@ -55,6 +55,7 @@ export default function WizardCard(props: WizardCardProps) {
 
                     <div className="wizardImage">
                         <img className="wizardCardShowoff" src={back} alt=""/>
+                        <h2 className="wizardName">{props.wizard.name}</h2>
                         <p className="wizardGender"> {props.wizard.gender}</p>
 
                         <ul className="wizardAttributes">
