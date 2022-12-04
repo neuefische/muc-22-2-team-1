@@ -9,10 +9,10 @@ type AddWizardProps = {
 export default function AddWizard(props: AddWizardProps) {
 
     const [name, setName] = useState<string>("")
-    const [gender, setGender] = useState<Gender | undefined>(undefined)
-    const [attribute1, setAttribute1] = useState<Attribute1| undefined>(undefined)
-    const [attribute2, setAttribute2] = useState<Attribute2| undefined>(undefined)
-    const [attribute3, setAttribute3] = useState<Attribute3| undefined>(undefined)
+    const [gender, setGender] = useState<Gender | string>('')
+    const [attribute1, setAttribute1] = useState<Attribute1 | string>('');
+    const [attribute2, setAttribute2] = useState<Attribute2 | string>('')
+    const [attribute3, setAttribute3] = useState<Attribute3 | string>('')
 
     function onNameChange(event: ChangeEvent<HTMLInputElement>) {
         setName(event.target.value)
@@ -44,14 +44,10 @@ export default function AddWizard(props: AddWizardProps) {
         })
             .then(() => {
                 setName("")
-
-                setGender(undefined)
-
-                setAttribute1(undefined)
-
-                setAttribute2(undefined)
-
-                setAttribute3(undefined)
+                setGender("")
+                setAttribute1("")
+                setAttribute2("")
+                setAttribute3("")
             })
     }
 
@@ -64,7 +60,8 @@ export default function AddWizard(props: AddWizardProps) {
                 </Grid>
 
                 <Grid item xs={7}>
-                    <TextField margin="normal" label="Name" fullWidth variant="outlined" onChange={onNameChange}/>
+                    <TextField margin="normal" value={name} size="small" label="Name" fullWidth variant="outlined"
+                               onChange={onNameChange}/>
 
 
                     <TextField
@@ -72,7 +69,9 @@ export default function AddWizard(props: AddWizardProps) {
                         select
                         fullWidth
                         id="Gender"
+                        value={gender}
                         label="Gender"
+                        size="small"
                         onChange={handleGender}
                     >
                         <MenuItem value={Gender.WITCH}>{Gender.WITCH}</MenuItem>
@@ -82,7 +81,8 @@ export default function AddWizard(props: AddWizardProps) {
                     <TextField
                         margin="normal"
                         select
-
+                        size="small"
+                        value={attribute1}
                         fullWidth
                         label="Attribute 1"
                         onChange={handleChange1}
@@ -95,28 +95,32 @@ export default function AddWizard(props: AddWizardProps) {
 
                     <TextField
                         margin="normal"
+                        size="small"
+                        value={attribute2}
                         select
                         fullWidth
                         label="attribute 2"
                         onChange={handleChange2}
                     >
-                        <MenuItem value={1}>tapfer</MenuItem>
-                        <MenuItem value={2}>treu</MenuItem>
-                        <MenuItem value={3}>kreativ</MenuItem>
-                        <MenuItem value={4}>selbstbewusst</MenuItem>
+                        <MenuItem value={Attribute2.TAPFER}>{Attribute2.TAPFER}</MenuItem>
+                        <MenuItem value={Attribute2.TREU}>{Attribute2.TREU}</MenuItem>
+                        <MenuItem value={Attribute2.KREATIV}>{Attribute2.KREATIV}</MenuItem>
+                        <MenuItem value={Attribute2.SELBSTBEWUSST}>{Attribute2.SELBSTBEWUSST}</MenuItem>
                     </TextField>
 
                     <TextField
                         margin="normal"
+                        size="small"
                         select
+                        value={attribute3}
                         fullWidth
                         label="attribute 3"
                         onChange={handleChange3}
                     >
-                        <MenuItem value={1}>entschlossen</MenuItem>
-                        <MenuItem value={2}>fleißig</MenuItem>
-                        <MenuItem value={3}>introvertiert</MenuItem>
-                        <MenuItem value={4}>rebellisch</MenuItem>
+                        <MenuItem value={Attribute3.ENTSCHLOSSEN}>{Attribute3.ENTSCHLOSSEN}</MenuItem>
+                        <MenuItem value={Attribute3.FLEISSIG}>{Attribute3.FLEISSIG}</MenuItem>
+                        <MenuItem value={Attribute3.INTROVERTIERT}>{Attribute3.INTROVERTIERT}</MenuItem>
+                        <MenuItem value={Attribute3.REBELLISCH}>{Attribute3.REBELLISCH}</MenuItem>
                     </TextField>
                 </Grid>
             </Grid>
