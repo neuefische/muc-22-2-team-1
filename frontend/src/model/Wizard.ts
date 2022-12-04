@@ -1,3 +1,5 @@
+import {MenuItem} from "@mui/material";
+
 export type Wizard = {
     id: string,
     name: string,
@@ -8,23 +10,26 @@ export type Wizard = {
 }
 
 export type NewWizard = {
-    name: string
+    name: string,
+    gender?: Gender,
+    attribute1?: Attribute1,
+    attribute2?: Attribute2,
+    attribute3?: Attribute3
 }
 
 export enum Gender {
-    WITCHER = "WITCHER",
-    WITCH = "WITCH",
+    WITCHER = "Zauberer",
+    WITCH = "Hexe",
     MUGGLE = "MUGGLE",
     HALFBLOOD = "HALFBLOOD",
     SQUIB = "SQUIB"
 }
 
-
 export enum Attribute1 {
-    HIGHIQ = "high IQ",
-    BRAVE = "brave",
-    FAITHFUL = "faithful",
-    HIGHAMBITION = "high ambition"
+    MUTIG = "mutig",
+    GERECHT = "gerecht",
+    KLUG = "klug",
+    EHRGEIZIG = "ehrgeizig"
 }
 
 export enum Attribute2 {
