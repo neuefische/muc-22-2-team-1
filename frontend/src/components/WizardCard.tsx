@@ -72,7 +72,8 @@ export default function WizardCard(props: WizardCardProps) {
 
             </div>
             <Button onClick={onDeleteClick}>Delete</Button>
-            <Button onClick={onFlipCard}>Flip Card</Button>
+            <Button onClick={onFlipCard}>Flip</Button>
+            <Button >Sort</Button>
         </div>
     )
 }

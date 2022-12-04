@@ -1,4 +1,4 @@
-import {Button, FormControl, Grid, InputLabel, MenuItem, Select, SelectChangeEvent, TextField} from "@mui/material";
+import {Button, Container, FormControl, Grid, InputLabel, MenuItem, Select, SelectChangeEvent, TextField} from "@mui/material";
 import {ChangeEvent, useState} from "react";
 import {Attribute1, Attribute2, Attribute3, Gender, NewWizard} from "../model/Wizard";
 
@@ -52,81 +52,83 @@ export default function AddWizard(props: AddWizardProps) {
     }
 
     return (
-        <div>
 
-            <Grid container spacing={2}>
-                <Grid item xs={5}>
-                    "Avatar"
-                </Grid>
-
-                <Grid item xs={7}>
-                    <TextField margin="normal" value={name} size="small" label="Name" fullWidth variant="outlined"
-                               onChange={onNameChange}/>
-
-
-                    <TextField
-                        margin="normal"
-                        select
-                        fullWidth
-                        id="Gender"
-                        value={gender}
-                        label="Gender"
-                        size="small"
-                        onChange={handleGender}
-                    >
-                        <MenuItem value={Gender.WITCH}>{Gender.WITCH}</MenuItem>
-                        <MenuItem value={Gender.WITCHER}>{Gender.WITCHER}</MenuItem>
-                    </TextField>
-
-                    <TextField
-                        margin="normal"
-                        select
-                        size="small"
-                        value={attribute1}
-                        fullWidth
-                        label="Attribute 1"
-                        onChange={handleChange1}
-                    >
-                        <MenuItem value={Attribute1.MUTIG}>{Attribute1.MUTIG}</MenuItem>
-                        <MenuItem value={Attribute1.GERECHT}>{Attribute1.GERECHT}</MenuItem>
-                        <MenuItem value={Attribute1.KLUG}>{Attribute1.KLUG}</MenuItem>
-                        <MenuItem value={Attribute1.EHRGEIZIG}>{Attribute1.EHRGEIZIG}</MenuItem>
-                    </TextField>
-
-                    <TextField
-                        margin="normal"
-                        size="small"
-                        value={attribute2}
-                        select
-                        fullWidth
-                        label="attribute 2"
-                        onChange={handleChange2}
-                    >
-                        <MenuItem value={Attribute2.TAPFER}>{Attribute2.TAPFER}</MenuItem>
-                        <MenuItem value={Attribute2.TREU}>{Attribute2.TREU}</MenuItem>
-                        <MenuItem value={Attribute2.KREATIV}>{Attribute2.KREATIV}</MenuItem>
-                        <MenuItem value={Attribute2.SELBSTBEWUSST}>{Attribute2.SELBSTBEWUSST}</MenuItem>
-                    </TextField>
-
-                    <TextField
-                        margin="normal"
-                        size="small"
-                        select
-                        value={attribute3}
-                        fullWidth
-                        label="attribute 3"
-                        onChange={handleChange3}
-                    >
-                        <MenuItem value={Attribute3.ENTSCHLOSSEN}>{Attribute3.ENTSCHLOSSEN}</MenuItem>
-                        <MenuItem value={Attribute3.FLEISSIG}>{Attribute3.FLEISSIG}</MenuItem>
-                        <MenuItem value={Attribute3.INTROVERTIERT}>{Attribute3.INTROVERTIERT}</MenuItem>
-                        <MenuItem value={Attribute3.REBELLISCH}>{Attribute3.REBELLISCH}</MenuItem>
-                    </TextField>
-                </Grid>
+        <Container maxWidth="lg">
+        <Grid container spacing={2}>
+            <Grid item xs={12} sm={5}>
+                "Avatar"
             </Grid>
 
-            <Button onClick={onSaveClick} variant="contained">Save</Button>
-        </div>
+            <Grid item xs={12}  sm={7}>
+                <TextField margin="normal" value={name} size="small" label="Name" fullWidth variant="outlined"
+                           onChange={onNameChange}/>
+
+
+                <TextField
+                    margin="normal"
+                    select
+                    fullWidth
+                    id="Gender"
+                    value={gender}
+                    label="Gender"
+                    size="small"
+                    onChange={handleGender}
+                >
+                    <MenuItem value={Gender.WITCH}>{Gender.WITCH}</MenuItem>
+                    <MenuItem value={Gender.WITCHER}>{Gender.WITCHER}</MenuItem>
+                </TextField>
+
+                <TextField
+                    margin="normal"
+                    select
+                    size="small"
+                    value={attribute1}
+                    fullWidth
+                    label="Attribute 1"
+                    onChange={handleChange1}
+                >
+                    <MenuItem value={Attribute1.MUTIG}>{Attribute1.MUTIG}</MenuItem>
+                    <MenuItem value={Attribute1.GERECHT}>{Attribute1.GERECHT}</MenuItem>
+                    <MenuItem value={Attribute1.KLUG}>{Attribute1.KLUG}</MenuItem>
+                    <MenuItem value={Attribute1.EHRGEIZIG}>{Attribute1.EHRGEIZIG}</MenuItem>
+                </TextField>
+
+                <TextField
+                    margin="normal"
+                    size="small"
+                    value={attribute2}
+                    select
+                    fullWidth
+                    label="attribute 2"
+                    onChange={handleChange2}
+                >
+                    <MenuItem value={Attribute2.TAPFER}>{Attribute2.TAPFER}</MenuItem>
+                    <MenuItem value={Attribute2.TREU}>{Attribute2.TREU}</MenuItem>
+                    <MenuItem value={Attribute2.KREATIV}>{Attribute2.KREATIV}</MenuItem>
+                    <MenuItem value={Attribute2.SELBSTBEWUSST}>{Attribute2.SELBSTBEWUSST}</MenuItem>
+                </TextField>
+
+                <TextField
+                    margin="normal"
+                    size="small"
+                    select
+                    value={attribute3}
+                    fullWidth
+                    label="attribute 3"
+                    onChange={handleChange3}
+                >
+                    <MenuItem value={Attribute3.ENTSCHLOSSEN}>{Attribute3.ENTSCHLOSSEN}</MenuItem>
+                    <MenuItem value={Attribute3.FLEISSIG}>{Attribute3.FLEISSIG}</MenuItem>
+                    <MenuItem value={Attribute3.INTROVERTIERT}>{Attribute3.INTROVERTIERT}</MenuItem>
+                    <MenuItem value={Attribute3.REBELLISCH}>{Attribute3.REBELLISCH}</MenuItem>
+                </TextField>
+            </Grid>
+
+            <Grid item xs={12}  sm={12}>
+                <Button onClick={onSaveClick} variant="contained">Save</Button>
+            </Grid>
+        </Grid>
+        </Container>
     )
 
 }
