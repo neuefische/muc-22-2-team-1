@@ -20,28 +20,26 @@ export type NewWizard = {
 export enum Gender {
     WITCHER = "Zauberer",
     WITCH = "Hexe",
-    MUGGLE = "MUGGLE",
-    HALFBLOOD = "HALFBLOOD",
-    SQUIB = "SQUIB"
+    DIVERS = "Divers"
 }
 
 export enum Attribute1 {
-    MUTIG = "mutig",
-    GERECHT = "gerecht",
-    KLUG = "klug",
-    EHRGEIZIG = "ehrgeizig"
+    BRAVE = "mutig",
+    JUST = "gerecht",
+    CLEVER = "klug",
+    AMBITIOUS = "ehrgeizig"
 }
 
 export enum Attribute2 {
-    TAPFER = "tapfer",
-    TREU = "treu",
-    KREATIV = "kreativ",
-    SELBSTBEWUSST = "selbstbewusst"
+    COURAGES = "tapfer",
+    FAITHFUL = "treu",
+    CREATIV = "kreativ",
+    ASSERTIV = "selbstbewusst"
 }
 
 export enum Attribute3 {
-    ENTSCHLOSSEN = "entschlossen",
-    FLEISSIG = "fleißig",
-    INTROVERTIERT = "introvertiert",
-    REBELLISCH = "rebellisch"
+    DETERMINED = "entschlossen",
+    DILIGENT = "fleißig",
+    INTROVERT = "introvertiert",
+    REBELIOUS = "rebellisch"
 }
