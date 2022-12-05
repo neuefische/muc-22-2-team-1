@@ -56,7 +56,7 @@ export default function AddWizard(props: AddWizardProps) {
         <Container maxWidth="lg">
         <Grid container spacing={2}>
             <Grid item xs={12} sm={5}>
-                "Avatar"
+               AVATAR
             </Grid>
 
             <Grid item xs={12}  sm={7}>
