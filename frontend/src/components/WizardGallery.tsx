@@ -10,22 +10,22 @@ type WizardGalleryProps = {
 
 export default function WizardGallery(props: WizardGalleryProps) {
 
-    const [searchText, setSearchText] = useState<string>("")
+    // const [searchText, setSearchText] = useState<string>("")
 
-    const filteredWizards: Wizard[] = props.wizards.filter(wizard => wizard.name.toLowerCase().includes(searchText.toLowerCase()))
+    // const filteredWizards: Wizard[] = props.wizards.filter(wizard => wizard.name.toLowerCase().includes(searchText.toLowerCase()))
 
-    function onSearchChange(event: ChangeEvent<HTMLInputElement>) {
+   /* function onSearchChange(event: ChangeEvent<HTMLInputElement>) {
         setSearchText(event.target.value)
-    }
+    }*/
 
     return (
 
 
         <Grid item xs={12} sm={6}>
-            <TextField margin="normal" value={searchText} size="small" label="Search" fullWidth variant="outlined"
-                       onChange={onSearchChange}/>
+           {/* <TextField margin="normal" value={searchText} size="small" label="Search" fullWidth variant="outlined"
+                       onChange={onSearchChange}/>*/}
 
-            {filteredWizards.reverse().map(wizard => <WizardCard wizard={wizard} key={wizard.id}
+            {props.wizards.map(wizard => <WizardCard wizard={wizard} key={wizard.id}
                                                                  removeWizard={props.removeWizard}/>)}
         </Grid>
 

@@ -16,6 +16,8 @@ export default function WizardApp() {
             <AddWizard addWizard={addWizard}/>
             <Container maxWidth="xl">
                 <Grid container spacing={2}>
+                    <br/>
+                    <br/>
                 <WizardGallery wizards={wizards} removeWizard={removeWizard}/>
                 <SortingHat/>
                     <Houses/>
