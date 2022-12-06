@@ -1,13 +1,8 @@
 package de.neuefische.backend.model;
 
 public enum Gender {
-    WITCHER("Zauberer"),
-    WITCH("Hexe"),
-    DIVERS("Divers");
+    WITCHER(),
+    WITCH(),
+    DIVERS();
 
-    private final String name;
-
-    private Gender(String name) {
-        this.name = name;
-    }
 }
