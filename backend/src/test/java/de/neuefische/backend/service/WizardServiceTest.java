@@ -1,6 +1,6 @@
 package de.neuefische.backend.service;
 
-import de.neuefische.backend.model.Wizard;
+import de.neuefische.backend.model.*;
 import de.neuefische.backend.repo.WizardRepo;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,7 +34,7 @@ class WizardServiceTest {
     void findById() throws IllegalAccessException {
 
         //GIVEN
-        Wizard givenWizard= new Wizard("testId","aaa","aaa","sss","bbb","ddd");
+        Wizard givenWizard= new Wizard("testId","aaa", Gender.WITCHER, Attribute1.AMBITIOUS, Attribute2.ASSERTIV, Attribute3.INTROVERT,House.GRYFFINDOR);
         when(wizardRepo.findById("testId")).thenReturn(Optional.of(givenWizard));
 
 
@@ -49,7 +49,7 @@ class WizardServiceTest {
     void addWizard() {
 
         
-        Wizard givenWizard= new Wizard("testId","aaa","aaa","sss","bbb","ddd");
+        Wizard givenWizard= new Wizard("testId","aaa",Gender.DIVERS, Attribute1.AMBITIOUS, Attribute2.ASSERTIV, Attribute3.DILIGENT, House.GRYFFINDOR);
 
         when(idService.generateId()).thenReturn("testId");
         when(wizardRepo.save(givenWizard)).thenReturn(givenWizard);
@@ -68,7 +68,7 @@ class WizardServiceTest {
     @Test
     void delete() throws IllegalAccessException {
         //GIVEN
-        Wizard givenWizard= new Wizard("testId","aaa","aaa","sss","bbb","ddd");
+        Wizard givenWizard= new Wizard("testId","aaa",Gender.WITCHER,Attribute1.AMBITIOUS,Attribute2.ASSERTIV,Attribute3.INTROVERT, House.RAVENCLAW);
         doNothing().when(wizardRepo).delete(givenWizard);
         when(wizardRepo.findById(givenWizard.id())).thenReturn(Optional.of(givenWizard));
 
