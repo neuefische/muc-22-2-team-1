@@ -2,14 +2,9 @@ package de.neuefische.backend.model;
 
 
 public enum Attribute1 {
-    Brave("mutig"),
-    Just("gerecht"),
-    Clever("klug"),
-    Ambitious("ehrgeizig");
+    Brave(),
+    Just(),
+    Clever(),
+    Ambitious()
 
-    private final String name;
-
-    private Attribute1(String name) {
-        this.name = name;
-    }
 }

@@ -1,4 +1,10 @@
 package de.neuefische.backend.model;
 
-public class Attribute3 {
+public enum Attribute3 {
+
+    DETERMINED (),
+    DILIGENT (),
+    INTROVERT (),
+    REBELIOUS ()
+
 }

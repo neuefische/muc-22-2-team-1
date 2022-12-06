@@ -1,4 +1,8 @@
 package de.neuefische.backend.model;
 
-public class Attribute2 {
+public enum Attribute2 {
+    COURAGES (),
+    FAITHFUL (),
+    CREATIV (),
+    ASSERTIV ()
 }
