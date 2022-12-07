@@ -18,12 +18,12 @@ export default function SortingHat() {
     useEffect(() => {
         givingScore(Attribute1.BRAVE);
         givingScore(Attribute2.FAITHFUL);
-        givingScore(Attribute3.REBELIOUS);
+        givingScore(Attribute3.REBELLIOUS);
     }, []);
 
     const givingScore = (attribute: string) => {
 
-        if (attribute === Attribute1.BRAVE || attribute === Attribute2.COURAGES || attribute === Attribute3.DETERMINED) {
+        if (attribute === Attribute1.BRAVE || attribute === Attribute2.COURAGEOUS || attribute === Attribute3.DETERMINED) {
             setHousesScore(prevState => {
                 const newState = prevState.map(house => {
                     if (house.name === 'Gryffindor') {
@@ -51,7 +51,7 @@ export default function SortingHat() {
             });
         }
 
-        if (attribute === Attribute1.CLEVER || attribute === Attribute2.CREATIV || attribute === Attribute3.INTROVERT) {
+        if (attribute === Attribute1.CLEVER || attribute === Attribute2.CREATIVE || attribute === Attribute3.INTROVERT) {
             setHousesScore(prevState => {
                 const newState = prevState.map(house => {
                     if (house.name === 'Ravenclaw') {
@@ -65,7 +65,7 @@ export default function SortingHat() {
             });
         }
 
-        if (attribute === Attribute1.AMBITIOUS || attribute === Attribute2.ASSERTIV || attribute === Attribute3.REBELIOUS) {
+        if (attribute === Attribute1.AMBITIOUS || attribute === Attribute2.ASSERTIVE || attribute === Attribute3.REBELLIOUS) {
             setHousesScore(prevState => {
                 const newState = prevState.map(house => {
                     if (house.name === 'Slytherin') {
@@ -81,7 +81,7 @@ export default function SortingHat() {
     }
 
     if (housesScore[0].score > housesScore[1].score) {
-        text = <p className="SpeakingHat">Das ist klar, du bist ein {housesScore[0].name}!</p>;
+        text = <p className="SpeakingHat">Das ist ganz klar, du bist ein {housesScore[0].name}!</p>;
     } else {
         text = <p className="SpeakingHat">Das ist Schwierig, du kannst dich entscheiden: <Button> {housesScore[0].name}</Button>
             <Button> {housesScore[1].name}</Button><Button> {housesScore[2].name}</Button></p>;
