@@ -103,10 +103,10 @@ export default function AddWizard(props: AddWizardProps) {
                     label="attribute 2"
                     onChange={handleChange2}
                 >
-                    <MenuItem value={Attribute2.COURAGES}>{Attribute2.COURAGES}</MenuItem>
+                    <MenuItem value={Attribute2.COURAGEOUS}>{Attribute2.COURAGEOUS}</MenuItem>
                     <MenuItem value={Attribute2.FAITHFUL}>{Attribute2.FAITHFUL}</MenuItem>
-                    <MenuItem value={Attribute2.CREATIV}>{Attribute2.CREATIV}</MenuItem>
-                    <MenuItem value={Attribute2.ASSERTIV}>{Attribute2.ASSERTIV}</MenuItem>
+                    <MenuItem value={Attribute2.CREATIVE}>{Attribute2.CREATIVE}</MenuItem>
+                    <MenuItem value={Attribute2.ASSERTIVE}>{Attribute2.ASSERTIVE}</MenuItem>
                 </TextField>
 
                 <TextField
@@ -121,7 +121,7 @@ export default function AddWizard(props: AddWizardProps) {
                     <MenuItem value={Attribute3.DETERMINED}>{Attribute3.DETERMINED}</MenuItem>
                     <MenuItem value={Attribute3.DILIGENT}>{Attribute3.DILIGENT}</MenuItem>
                     <MenuItem value={Attribute3.INTROVERT}>{Attribute3.INTROVERT}</MenuItem>
-                    <MenuItem value={Attribute3.REBELIOUS}>{Attribute3.REBELIOUS}</MenuItem>
+                    <MenuItem value={Attribute3.REBELLIOUS}>{Attribute3.REBELLIOUS}</MenuItem>
                 </TextField>
             </Grid>
 

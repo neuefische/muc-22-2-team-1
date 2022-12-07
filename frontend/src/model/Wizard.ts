@@ -31,15 +31,15 @@ export enum Attribute1 {
 }
 
 export enum Attribute2 {
-    COURAGES = "tapfer",
+    COURAGEOUS = "tapfer",
     FAITHFUL = "treu",
-    CREATIV = "kreativ",
-    ASSERTIV = "selbstbewusst"
+    CREATIVE = "kreativ",
+    ASSERTIVE = "selbstbewusst"
 }
 
 export enum Attribute3 {
     DETERMINED = "entschlossen",
     DILIGENT = "fleißig",
     INTROVERT = "introvertiert",
-    REBELIOUS = "rebellisch"
+    REBELLIOUS = "rebellisch"
 }
