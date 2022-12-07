@@ -1,8 +1,8 @@
 import {Grid} from "@mui/material";
-import gryffindor from '../assets/gryffindor.png';
-import slytherin from '../assets/slytherin.png';
-import ravenclaw from '../assets/ravenclaw.png';
-import hufflepuff from '../assets/hufflepuff.png';
+import gryffindor from '../assets/gryffindor-bg.jpg';
+import slytherin from '../assets/slytherin-bg.jpg';
+import ravenclaw from '../assets/ravenclaw-bg.jpg';
+import hufflepuff from '../assets/hufflepuff-bg.png';
 import './Houses.scss';
 
 export default function Houses() {

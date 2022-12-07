@@ -1,4 +1,4 @@
-import {Grid} from "@mui/material";
+import {Button, Grid} from "@mui/material";
 import sortingHat from '../assets/sorting_hat.jpeg';
 import './SortingHat.scss';
 import {Attribute1, Attribute2, Attribute3} from "../model/Wizard";
@@ -16,9 +16,9 @@ export default function SortingHat() {
     }, {name: 'Hufflepuff', score: 0}, {name: 'Slytherin', score: 0}]);
     let text;
     useEffect(() => {
-        givingScore(Attribute1.AMBITIOUS);
-        givingScore(Attribute2.COURAGES);
-        givingScore(Attribute3.DILIGENT);
+        givingScore(Attribute1.BRAVE);
+        givingScore(Attribute2.FAITHFUL);
+        givingScore(Attribute3.REBELIOUS);
     }, []);
 
     const givingScore = (attribute: string) => {
@@ -83,8 +83,8 @@ export default function SortingHat() {
     if (housesScore[0].score > housesScore[1].score) {
         text = <p className="SpeakingHat">Das ist klar, du bist ein {housesScore[0].name}!</p>;
     } else {
-        text = <p className="SpeakingHat">Das ist Schwierig, du könntest genauso gut als {housesScore[0].name},
-             {housesScore[1].name} oder {housesScore[2].name} passen.</p>;
+        text = <p className="SpeakingHat">Das ist Schwierig, du kannst dich entscheiden: <Button> {housesScore[0].name}</Button>
+            <Button> {housesScore[1].name}</Button><Button> {housesScore[2].name}</Button></p>;
     }
 
     return (
