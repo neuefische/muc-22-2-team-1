@@ -1,6 +1,45 @@
+$grif-color-1: #740001;
+$grif-color-2: #d3a625;
+
+$slit-color-1: #2a623d;
+$slit-color-2: #5d5d5d;
+
+$rave-color-1: #222f5b;
+$rave-color-2: #946b2d;
+
+$huff-color-1: #ecb939;
+$huff-color-2: #726255;
+
 .HouseFlag{
   width: 100%;
   margin-bottom: 20px;
   height: auto;
+}
 
+.Houses {
+  display: flex;
+}
+
+.HouseGallery {
+  width: 100%;
+
+  &.gryffindor {
+    background: $grif-color-1;
+  }
+
+  &.slytherin {
+    background: $slit-color-1;
+  }
+
+  &.ravenclaw {
+    background: $rave-color-1;
+  }
+
+  &.hufflepuff {
+    background: $huff-color-1;
+  }
+
+  img {
+    max-width: 80%;
+  }
 }
