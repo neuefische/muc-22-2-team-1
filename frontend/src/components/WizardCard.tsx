@@ -32,6 +32,8 @@ export default function WizardCard(props: WizardCardProps) {
 
     console.log(props.wizard);
 
+    console.log(props.wizard);
+
     return (
         <div className="box">
             <div className={`card ${props.house} ${isFlipped && 'card-flipped'}`}>

@@ -97,8 +97,6 @@ export default function SortingHat() {
         <Grid item xs={12} sm={3}>
             <img src={sortingHat} alt="the sorting hat" className="Hat"/>
             {text}
-
-
         </Grid>
     )
 }

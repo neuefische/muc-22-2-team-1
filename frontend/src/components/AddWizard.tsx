@@ -40,6 +40,14 @@ export default function AddWizard(props: AddWizardProps) {
     };
 
 
+    function generateAvatar() {
+        setAvatar(createAvatar(style, {
+            dataUri: true,
+            size: 256
+        }))
+    };
+
+
     function onNameChange(event: ChangeEvent<HTMLInputElement>) {
         setName(event.target.value)
     }
