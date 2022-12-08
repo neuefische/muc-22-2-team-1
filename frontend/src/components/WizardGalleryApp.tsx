@@ -4,6 +4,12 @@ import Houses from "./Houses";
 import WizardGalleryWithSearch from "./WizardGalleryWithSearch";
 
 import {ReactNode} from "react";
+import HousesCounter from "./HouseGallery";
+import gryffindor from "../assets/gryffindor-wappe.png";
+import ravenclaw from "../assets/ravenclaw-wappe.png";
+import hufflepuff from "../assets/hufflepuff-wappe.png";
+import slytherin from "../assets/slytherin-wappe.png";
+import HouseGallery from "./HouseGallery";
 import {Grid} from "@mui/material"; // Grid version 2
 function Item(props: { children: ReactNode }) {
     return null;
@@ -19,19 +25,14 @@ export default function WizardGalleryApp() {
 
             <WizardGalleryWithSearch wizards={wizards} removeWizard={removeWizard}/>
 
-            <Grid container spacing={2}>
-                <Grid xs>
-                    <Item>xs</Item>
+            <div className="Houses">
+                <Grid container spacing={0}>
+                <HouseGallery image={gryffindor} houseName="gryffindor" students={2}></HouseGallery>
+                <HouseGallery image={ravenclaw}  houseName="ravenclaw"  students={1}></HouseGallery>
+                <HouseGallery image={hufflepuff} houseName="hufflepuff" students={3}></HouseGallery>
+                <HouseGallery image={slytherin}  houseName="slytherin"  students={4}></HouseGallery>
                 </Grid>
-                <Grid xs={6}>
-
-                    <Item>xs=6</Item>
-                </Grid>
-                <Grid xs>
-                    <Item>xs</Item>
-                </Grid>
-            </Grid>
-            <Houses/>
+                </div>
 
         </div>
     )

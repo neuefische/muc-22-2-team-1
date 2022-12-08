@@ -20,7 +20,7 @@ export default function WizardApp() {
                     <br/>
                 <WizardGallery wizards={wizards} removeWizard={removeWizard}/>
                 <SortingHat/>
-                    <Houses/>
+<Houses></Houses>
                 </Grid>
             </Container>
         </div>
