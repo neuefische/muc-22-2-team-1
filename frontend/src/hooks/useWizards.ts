@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function useWizards(){
 
-    const [wizards, setWizards] = useState<Wizard[]>([])
+    const [wizards, setWizards] = useState<NewWizard[]>([])
 
     useEffect( ()=> {
         getWizards()

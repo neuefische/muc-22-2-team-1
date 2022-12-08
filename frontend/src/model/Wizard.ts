@@ -10,6 +10,8 @@ export type Wizard = {
 }
 
 export type NewWizard = {
+    avatar:string,
+    id: string,
     name: string,
     gender: Gender | string,
     attribute1: Attribute1 | string,

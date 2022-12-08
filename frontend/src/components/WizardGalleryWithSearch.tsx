@@ -1,10 +1,10 @@
-import {Wizard} from "../model/Wizard";
+import {NewWizard, Wizard} from "../model/Wizard";
 import {ChangeEvent, useState} from "react";
 import {Grid, TextField} from "@mui/material";
 import WizardCard from "./WizardCard";
 
 type WizardGalleryWithSearchProps = {
-    wizards: Wizard []
+    wizards: NewWizard []
     removeWizard: (id: string) => void
 }
 
@@ -12,7 +12,7 @@ export default function WizardGalleryWithSearch(props: WizardGalleryWithSearchPr
 
     const [searchText, setSearchText] = useState<string>("")
 
-    const filteredWizards: Wizard[] = props.wizards.filter(wizard => wizard.name.toLowerCase().includes(searchText.toLowerCase()))
+    const filteredWizards: NewWizard[] = props.wizards.filter(wizard => wizard.name.toLowerCase().includes(searchText.toLowerCase()))
 
     function onSearchChange(event: ChangeEvent<HTMLInputElement>) {
         setSearchText(event.target.value)
