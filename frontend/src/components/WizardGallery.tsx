@@ -1,10 +1,10 @@
-import {Wizard} from "../model/Wizard";
+import {NewWizard, Wizard} from "../model/Wizard";
 import {ChangeEvent, useState} from "react";
 import WizardCard from "./WizardCard";
 import {Grid, TextField} from "@mui/material";
 
 type WizardGalleryProps = {
-    wizards: Wizard []
+    wizards: NewWizard []
     removeWizard: (id: string) => void
 }
 
