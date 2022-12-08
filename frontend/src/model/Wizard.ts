@@ -17,29 +17,30 @@ export type NewWizard = {
     attribute3: Attribute3 | string,
 }
 
+
 export enum Gender {
-    WITCHER = "Zauberer",
-    WITCH = "Hexe",
-    DIVERS = "Divers"
+    WITCHER = "WITCHER",
+    WITCH = "WITCH",
+    DIVERS = "DIVERS"
 }
 
 export enum Attribute1 {
-    BRAVE = "mutig",
-    JUST = "gerecht",
-    CLEVER = "klug",
-    AMBITIOUS = "ehrgeizig"
+    BRAVE="BRAVE",
+    JUST = "JUST",
+    CLEVER = "CLEVER",
+    AMBITIOUS = "AMBITIOUS"
 }
 
 export enum Attribute2 {
-    COURAGEOUS = "tapfer",
-    FAITHFUL = "treu",
-    CREATIVE = "kreativ",
-    ASSERTIVE = "selbstbewusst"
+    COURAGEOUS = "COURAGEOUS",
+    FAITHFUL = "FAITHFUL",
+    CREATIVE = "CREATIVE",
+    ASSERTIVE = "ASSERTIVE"
 }
 
 export enum Attribute3 {
-    DETERMINED = "entschlossen",
-    DILIGENT = "fleißig",
-    INTROVERT = "introvertiert",
-    REBELLIOUS = "rebellisch"
+    DETERMINED = "DETERMINED",
+    DILIGENT = "DILIGENT",
+    INTROVERT = "INTROVERT",
+    REBELLIOUS = "REBELLIOUS"
 }
