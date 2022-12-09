@@ -1,8 +1,8 @@
 package de.neuefische.backend.model;
 
 public enum House {
-    GRYFFINDOR (),
-    HUFFLEPUFF (),
-    RAVENCLAW (),
-    SLYTHERIN ()
+    GRYFFINDOR,
+    HUFFLEPUFF,
+    RAVENCLAW,
+    SLYTHERIN
 }

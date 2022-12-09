@@ -4,5 +4,5 @@ public enum Attribute2 {
     COURAGEOUS,
     FAITHFUL,
     CREATIVE,
-    ASSERTIV
+    ASSERTIVE
 }
