@@ -41,10 +41,7 @@ public class WizardController {
     public void deleteWizard(@PathVariable String id) throws IllegalAccessException {
         wizardService.delete(id);
     }
-   /* @PostMapping("/{id}")
-    public void selectHouse(@RequestBody Wizard wizard){
-        return wizardService.selectHouse(wizard);
-    }*/
+
 }
 
 
