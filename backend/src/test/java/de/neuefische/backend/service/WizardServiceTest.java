@@ -51,7 +51,7 @@ class WizardServiceTest {
     void addWizard() {
 
 
-        Wizard givenWizard = new Wizard("testId", "aaa", Gender.DIVERS, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.DILIGENT, "GRYFFINDOR");
+        Wizard givenWizard = new Wizard("testId", "aaa", Gender.DIVERS, Attribute1.BRAVE, Attribute2.COURAGEOUS, Attribute3.DETERMINED, "GRYFFINDOR");
 
         when(idService.generateId()).thenReturn("testId");
         when(wizardRepo.save(givenWizard)).thenReturn(givenWizard);
