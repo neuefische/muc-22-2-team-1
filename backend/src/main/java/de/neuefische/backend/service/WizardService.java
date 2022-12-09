@@ -98,9 +98,9 @@ public class WizardService {
         }
         int maxScoreIndex = scoreIndex;
 
-        String[] houses ={"GRYFFINDOR", "HUFFLEPUFF", "RAVENCLAW", "SLYTHERIN"};
+        String[] houses = {"GRYFFINDOR", "HUFFLEPUFF", "RAVENCLAW", "SLYTHERIN"};
 
-       return houses[maxScoreIndex];
+        return houses[maxScoreIndex];
 
     }
 }

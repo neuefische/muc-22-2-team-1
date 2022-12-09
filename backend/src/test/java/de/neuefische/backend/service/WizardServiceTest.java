@@ -36,7 +36,7 @@ class WizardServiceTest {
     void findById() throws IllegalAccessException {
 
         //GIVEN
-        Wizard givenWizard = new Wizard("testId", "aaa", Gender.WITCHER, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.INTROVERT, "GRYFFINDOR");
+        Wizard givenWizard = new Wizard("testId", "Lui", Gender.WITCHER, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.REBELLIOUS, "SLYTHERIN");
         when(wizardRepo.findById("testId")).thenReturn(Optional.of(givenWizard));
 
 
@@ -51,7 +51,7 @@ class WizardServiceTest {
     void addWizard() {
 
 
-        Wizard givenWizard = new Wizard("testId", "aaa", Gender.DIVERS, Attribute1.BRAVE, Attribute2.COURAGEOUS, Attribute3.DETERMINED, "GRYFFINDOR");
+        Wizard givenWizard = new Wizard("testId", "Lui", Gender.DIVERS, Attribute1.BRAVE, Attribute2.COURAGEOUS, Attribute3.DETERMINED, "GRYFFINDOR");
 
         when(idService.generateId()).thenReturn("testId");
         when(wizardRepo.save(givenWizard)).thenReturn(givenWizard);
@@ -80,7 +80,7 @@ class WizardServiceTest {
         //THEN
         assertThat(actual, containsInAnyOrder(
                 new Wizard("testId1", "Nick", Gender.DIVERS, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.DILIGENT, "GRYFFINDOR")
-                       ));
+        ));
 
 
     }
@@ -103,13 +103,126 @@ class WizardServiceTest {
     void selectHouse_shouldSelectGryffendor_when_BraveCourregousDetermined() {
 
         //GIVEN
-        Wizard givenWizard = new Wizard("testId", "aaa", Gender.WITCHER, Attribute1.BRAVE, Attribute2.COURAGEOUS, Attribute3.DETERMINED, "RAVENCLAW");
+        Wizard givenWizard = new Wizard("testId", "Lui", Gender.WITCHER, Attribute1.BRAVE, Attribute2.COURAGEOUS, Attribute3.DETERMINED, "");
 
-             //WHEN
+        //WHEN
         String expected = String.valueOf("GRYFFINDOR");
 
         String result = wizardService.selectHouse(givenWizard);
         //THEN
         assertEquals(expected, result);
     }
+
+    @Test
+    void selectHouse_shouldSelectHufflepuff_when_JustFaithfulDiligent() {
+
+        //GIVEN
+        Wizard givenWizard = new Wizard("testId", "Lui", Gender.WITCHER, Attribute1.JUST, Attribute2.FAITHFUL, Attribute3.DILIGENT, "");
+
+        //WHEN
+        String expected = String.valueOf("HUFFLEPUFF");
+
+        String result = wizardService.selectHouse(givenWizard);
+        //THEN
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void selectHouse_shouldSelectRavenclaw_when_CleverCreativeIntrovert() {
+
+        //GIVEN
+        Wizard givenWizard = new Wizard("testId", "Lui", Gender.WITCHER, Attribute1.CLEVER, Attribute2.CREATIVE, Attribute3.INTROVERT, "");
+
+        //WHEN
+        String expected = String.valueOf("RAVENCLAW");
+
+        String result = wizardService.selectHouse(givenWizard);
+        //THEN
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void selectHouse_shouldSelectSlytherin_when_AmbitiousAssertiveRebellious() {
+
+        //GIVEN
+        Wizard givenWizard = new Wizard("testId", "Lui", Gender.WITCHER, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.REBELLIOUS, "");
+
+        //WHEN
+        String expected = String.valueOf("SLYTHERIN");
+
+        String result = wizardService.selectHouse(givenWizard);
+        //THEN
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void selectHouse_shouldSelectGryffendor_when_BraveCourregousDiligent() {
+
+        //GIVEN
+        Wizard givenWizard = new Wizard("testId", "Lui", Gender.WITCHER, Attribute1.BRAVE, Attribute2.COURAGEOUS, Attribute3.DILIGENT, "");
+
+        //WHEN
+        String expected = String.valueOf("GRYFFINDOR");
+
+        String result = wizardService.selectHouse(givenWizard);
+        //THEN
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void selectHouse_shouldSelectHufflepuff_when_JustFaithfulIntrovert() {
+
+        //GIVEN
+        Wizard givenWizard = new Wizard("testId", "Lui", Gender.WITCHER, Attribute1.JUST, Attribute2.FAITHFUL, Attribute3.INTROVERT, "");
+
+        //WHEN
+        String expected = String.valueOf("HUFFLEPUFF");
+
+        String result = wizardService.selectHouse(givenWizard);
+        //THEN
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void selectHouse_shouldSelectGryffendor_when_BraveFaithfulIntrovert() {
+
+        //GIVEN
+        Wizard givenWizard = new Wizard("testId", "Lui", Gender.WITCHER, Attribute1.BRAVE, Attribute2.FAITHFUL, Attribute3.INTROVERT, "");
+
+        //WHEN
+        String expected = String.valueOf("GRYFFINDOR");
+
+        String result = wizardService.selectHouse(givenWizard);
+        //THEN
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void selectHouse_shouldSelectHufflepuff_when_JustCreativeRebellious() {
+
+        //GIVEN
+        Wizard givenWizard = new Wizard("testId", "Lui", Gender.WITCHER, Attribute1.JUST, Attribute2.CREATIVE, Attribute3.REBELLIOUS, "");
+
+        //WHEN
+        String expected = String.valueOf("HUFFLEPUFF");
+
+        String result = wizardService.selectHouse(givenWizard);
+        //THEN
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void selectHouse_shouldSelectSlytherin_when_AmbitiousDiligentCreative() {
+
+        //GIVEN
+        Wizard givenWizard = new Wizard("testId", "Lui", Gender.WITCHER, Attribute1.AMBITIOUS, Attribute2.CREATIVE, Attribute3.DILIGENT, "");
+
+        //WHEN
+        String expected = String.valueOf("HUFFLEPUFF");
+
+        String result = wizardService.selectHouse(givenWizard);
+        //THEN
+        assertEquals(expected, result);
+    }
+
 }
