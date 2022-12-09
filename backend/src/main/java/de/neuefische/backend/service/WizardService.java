@@ -39,7 +39,8 @@ public class WizardService {
     public Wizard addWizard(Wizard wizard) {
         String id = idService.generateId();
         Wizard wizardWithId = wizard.withId(id);
-        return wizardRepo.save(wizardWithId);
+        Wizard wizardWithHouse = wizardWithId.withChosenHouse(selectHouse(wizardWithId));
+        return wizardRepo.save(wizardWithHouse);
     }
 
     public List<Wizard> search(String s) {
@@ -59,7 +60,9 @@ public class WizardService {
     }
 
     public String selectHouse(Wizard wizard) {
-        int[] houseScore = new int[3];
+
+
+        int[] houseScore = new int[4];
 
 
         if (wizard.attribute1().equals(Attribute1.BRAVE)
@@ -95,11 +98,9 @@ public class WizardService {
         }
         int maxScoreIndex = scoreIndex;
 
-        String[] houses = {String.valueOf(House.GRYFFINDOR),
-                String.valueOf(House.HUFFLEPUFF),
-                String.valueOf(House.RAVENCLAW),
-                String.valueOf(House.SLYTHERIN)};
+        String[] houses ={"GRYFFINDOR", "HUFFLEPUFF", "RAVENCLAW", "SLYTHERIN"};
 
-        return houses[maxScoreIndex];
+       return houses[maxScoreIndex];
+
     }
 }
