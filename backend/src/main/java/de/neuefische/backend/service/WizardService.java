@@ -1,7 +1,7 @@
 package de.neuefische.backend.service;
 
 
-import de.neuefische.backend.model.Wizard;
+import de.neuefische.backend.model.*;
 import de.neuefische.backend.repo.WizardRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -56,5 +56,50 @@ public class WizardService {
     public void delete(String id) throws IllegalAccessException {
         Wizard wizard = findById(id);
         wizardRepo.delete(wizard);
+    }
+
+    public String selectHouse(Wizard wizard) {
+        int[] houseScore = new int[3];
+
+
+        if (wizard.attribute1().equals(Attribute1.BRAVE)
+                || wizard.attribute2().equals(Attribute2.COURAGEOUS)
+                || wizard.attribute3().equals(Attribute3.DETERMINED)) {
+            houseScore[0]++;
+        }
+        if (wizard.attribute1().equals(Attribute1.JUST)
+                || wizard.attribute2().equals(Attribute2.FAITHFUL)
+                || wizard.attribute3().equals(Attribute3.DILIGENT)) {
+            houseScore[1]++;
+        }
+
+        if (wizard.attribute1().equals(Attribute1.CLEVER)
+                || wizard.attribute2().equals(Attribute2.CREATIVE)
+                || wizard.attribute3().equals(Attribute3.INTROVERT)) {
+            houseScore[2]++;
+        }
+        if (wizard.attribute1().equals(Attribute1.AMBITIOUS)
+                || wizard.attribute2().equals(Attribute2.ASSERTIVE)
+                || wizard.attribute3().equals(Attribute3.REBELLIOUS)) {
+            houseScore[3]++;
+        }
+        int max = houseScore[0];
+        int scoreIndex = 0;
+
+        for (int i = 0; i < houseScore.length; i++) {
+            if (max < houseScore[i]) {
+                max = houseScore[i];
+                scoreIndex = i;
+            }
+
+        }
+        int maxScoreIndex = scoreIndex;
+
+        String[] houses = {String.valueOf(House.GRYFFINDOR),
+                String.valueOf(House.HUFFLEPUFF),
+                String.valueOf(House.RAVENCLAW),
+                String.valueOf(House.SLYTHERIN)};
+
+        return houses[maxScoreIndex];
     }
 }

@@ -17,10 +17,10 @@ public record Wizard(
         Attribute2 attribute2,
         Attribute3 attribute3,
 
-        House chosenHouse) {
+        String chosenHouse) {
 
 
-    public Wizard(String id, String name, Gender gender, Attribute1 attribute1, Attribute2 attribute2, Attribute3 attribute3,House chosenHouse) {
+    public Wizard(String id, String name, Gender gender, Attribute1 attribute1, Attribute2 attribute2, Attribute3 attribute3,String chosenHouse) {
         this.id = id;
         this.name = name;
         this.gender = gender;
