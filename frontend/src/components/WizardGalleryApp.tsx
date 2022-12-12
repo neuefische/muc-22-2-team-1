@@ -1,6 +1,4 @@
 import useWizards from "../hooks/useWizards";
-
-import Houses from "./Houses";
 import WizardGalleryWithSearch from "./WizardGalleryWithSearch";
 
 import {ReactNode} from "react";
@@ -17,7 +15,7 @@ function Item(props: { children: ReactNode }) {
 
 export default function WizardGalleryApp() {
 
-    const {wizards, removeWizard} = useWizards()
+    const {wizards, removeWizard, addWizard} = useWizards()
 
     return (
         <div>

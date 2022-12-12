@@ -37,5 +37,9 @@ export default function useWizards(){
             })
     }
 
-    return{wizards, addWizard, removeWizard}
+
+
+
+
+    return{wizards, removeWizard, addWizard}
 }

@@ -5,7 +5,7 @@ import {Grid, TextField} from "@mui/material";
 
 type WizardGalleryProps = {
     wizards: NewWizard []
-    removeWizard: (id: string) => void
+    removeWizard: (id: string) => void,
 }
 
 export default function WizardGallery(props: WizardGalleryProps) {
@@ -26,7 +26,7 @@ export default function WizardGallery(props: WizardGalleryProps) {
                        onChange={onSearchChange}/>*/}
 
             {props.wizards.map(wizard => <WizardCard wizard={wizard} key={wizard.id}
-                                                                 removeWizard={props.removeWizard}/>)}
+                                                                 removeWizard={props.removeWizard } />)}
         </Grid>
 
     )

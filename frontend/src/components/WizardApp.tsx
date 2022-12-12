@@ -7,7 +7,7 @@ import Houses from "./Houses";
 
 export default function WizardApp() {
 
-    const {wizards, addWizard, removeWizard} = useWizards()
+    const {wizards, removeWizard, addWizard} = useWizards()
 
     return (
         <div>
