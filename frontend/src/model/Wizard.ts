@@ -7,6 +7,7 @@ export type Wizard = {
     attribute1: Attribute1,
     attribute2: Attribute2,
     attribute3: Attribute3
+    chosenHouse: string
 }
 
 export type NewWizard = {
@@ -17,6 +18,8 @@ export type NewWizard = {
     attribute1: Attribute1 | string,
     attribute2: Attribute2 | string,
     attribute3: Attribute3 | string,
+    chosenHouse: string
+
 }
 
 

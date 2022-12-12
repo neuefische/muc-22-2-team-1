@@ -30,6 +30,7 @@ export default function AddWizard(props: AddWizardProps) {
     const [attribute1, setAttribute1] = useState<Attribute1 | string>('');
     const [attribute2, setAttribute2] = useState<Attribute2 | string>('')
     const [attribute3, setAttribute3] = useState<Attribute3 | string>('')
+    const [chosenHouse, setChosenHouse] = useState<string>('')
 
     function generateAvatar() {
         setAvatar(createAvatar(style, {
@@ -67,7 +68,8 @@ export default function AddWizard(props: AddWizardProps) {
             gender: gender,
             attribute1: attribute1,
             attribute2: attribute2,
-            attribute3: attribute3
+            attribute3: attribute3,
+            chosenHouse: chosenHouse
         })
             .then(() => {
                 setAvatar(createAvatar(style, {
@@ -79,6 +81,7 @@ export default function AddWizard(props: AddWizardProps) {
                 setAttribute1("")
                 setAttribute2("")
                 setAttribute3("")
+                setChosenHouse("")
             })
     }
 

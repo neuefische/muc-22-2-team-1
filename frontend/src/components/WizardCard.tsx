@@ -4,12 +4,14 @@ import front from '../assets/front-card.png'
 import back from '../assets/back-card.png'
 import {useState} from "react";
 import {Button} from "@mui/material";
+import {red} from "@mui/material/colors";
 
 
 type WizardCardProps = {
     wizard: NewWizard,
     house?: string,
-    removeWizard: (id: string) => void
+    removeWizard: (id: string) => void,
+   // showSelectedHouse: (id: string) => Promise<void>
 }
 
 
@@ -23,6 +25,10 @@ export default function WizardCard(props: WizardCardProps) {
     function onFlipCard() {
         setIsFlipped(prev => !prev);
     }
+    /*function onAsignHouseClick() {
+        props.showSelectedHouse(props.wizard.chosenHouse)
+
+    }*/
 
     console.log(props.wizard);
 
@@ -66,7 +72,10 @@ export default function WizardCard(props: WizardCardProps) {
                                 <li>{props.wizard.attribute1}</li>
                                 <li>{props.wizard.attribute2}</li>
                                 <li>{props.wizard.attribute3}</li>
+                                <li>{props.wizard.chosenHouse}</li>
+
                             </ul>
+
                         </div>
                     </div>
                 </div>
@@ -76,7 +85,7 @@ export default function WizardCard(props: WizardCardProps) {
             <p>{props.wizard.avatar}</p>
             <Button onClick={onDeleteClick}>Delete</Button>
             <Button onClick={onFlipCard}>Flip</Button>
-            <Button >onClick={}</Button>
+            <Button >Assign a house</Button>
         </div>
     )
 }
