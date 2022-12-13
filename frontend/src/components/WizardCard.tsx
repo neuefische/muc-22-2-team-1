@@ -1,10 +1,10 @@
-import {NewWizard, Wizard} from "../model/Wizard";
+import {NewWizard} from "../model/Wizard";
 import './WizardCard.scss';
 import front from '../assets/front-card.png'
 import back from '../assets/back-card.png'
 import {useState} from "react";
 import {Button} from "@mui/material";
-import {red} from "@mui/material/colors";
+
 
 
 type WizardCardProps = {
@@ -47,7 +47,7 @@ export default function WizardCard(props: WizardCardProps) {
 
                             <img className="wizardAvatar"
                                  src={props.wizard.avatar}
-                                 alt="wizard image"
+                                 alt="wizard"
                             />
                             <img className="wizardCardShowoff" src={front} alt=""/>
 
