@@ -1,7 +1,5 @@
 import useWizards from "../hooks/useWizards";
 import WizardGalleryWithSearch from "./WizardGalleryWithSearch";
-
-import {ReactNode} from "react";
 import HouseGallery from "./HouseGallery";
 import gryffindor from "../assets/gryffindor-wappe.png";
 import ravenclaw from "../assets/ravenclaw-wappe.png";
