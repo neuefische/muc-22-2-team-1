@@ -8,13 +8,10 @@ import ravenclaw from "../assets/ravenclaw-wappe.png";
 import hufflepuff from "../assets/hufflepuff-wappe.png";
 import slytherin from "../assets/slytherin-wappe.png";
 import {Grid} from "@mui/material"; // Grid version 2
-function Item(props: { children: ReactNode }) {
-    return null;
-}
 
 export default function WizardGalleryApp() {
 
-    const {wizards, removeWizard, addWizard} = useWizards()
+    const {wizards, removeWizard} = useWizards()
 
     return (
         <div>
