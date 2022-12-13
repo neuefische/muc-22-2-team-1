@@ -11,6 +11,7 @@ import java.util.Objects;
 public record Wizard(
         @Id
         String id,
+        String avatar,
         String name,
         Gender gender,
         Attribute1 attribute1,
@@ -20,8 +21,9 @@ public record Wizard(
         String chosenHouse) {
 
 
-    public Wizard(String id, String name, Gender gender, Attribute1 attribute1, Attribute2 attribute2, Attribute3 attribute3,String chosenHouse) {
+    public Wizard(String id, String avatar, String name, Gender gender, Attribute1 attribute1, Attribute2 attribute2, Attribute3 attribute3,String chosenHouse) {
         this.id = id;
+        this.avatar = avatar;
         this.name = name;
         this.gender = gender;
         this.attribute1 = attribute1;

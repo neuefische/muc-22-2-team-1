@@ -36,7 +36,7 @@ class WizardServiceTest {
     void findById() throws IllegalAccessException {
 
         //GIVEN
-        Wizard givenWizard = new Wizard("testId", "Lui", Gender.WITCHER, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.REBELLIOUS, "SLYTHERIN");
+        Wizard givenWizard = new Wizard("testId", "aaa", Gender.WITCHER, Attribute1.AMBITIOUS, Attribute2.ASSERTIV, Attribute3.INTROVERT, House.GRYFFINDOR);
         when(wizardRepo.findById("testId")).thenReturn(Optional.of(givenWizard));
 
 
@@ -51,7 +51,7 @@ class WizardServiceTest {
     void addWizard() {
 
 
-        Wizard givenWizard = new Wizard("testId", "Lui", Gender.DIVERS, Attribute1.BRAVE, Attribute2.COURAGEOUS, Attribute3.DETERMINED, "GRYFFINDOR");
+        Wizard givenWizard = new Wizard("testId", "aaa", "alala", Gender.DIVERS, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.DILIGENT, "GRYFFINDOR");
 
         when(idService.generateId()).thenReturn("testId");
         when(wizardRepo.save(givenWizard)).thenReturn(givenWizard);
@@ -66,9 +66,9 @@ class WizardServiceTest {
         //GIVEN
         when(wizardRepo.findAll()).thenReturn(
                 List.of(
-                        new Wizard("testId1", "Nick", Gender.DIVERS, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.DILIGENT, "GRYFFINDOR"),
-                        new Wizard("testId2", "Lis", Gender.DIVERS, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.DILIGENT, "GRYFFINDOR"),
-                        new Wizard("testId3", "Johanna", Gender.DIVERS, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.DILIGENT, "GRYFFINDOR")
+                        new Wizard("testId1","image", "Nick", Gender.DIVERS, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.DILIGENT, "GRYFFINDOR"),
+                        new Wizard("testId2","image", "Lis", Gender.DIVERS, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.DILIGENT, "GRYFFINDOR"),
+                        new Wizard("testId3","image", "Johanna", Gender.DIVERS, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.DILIGENT, "GRYFFINDOR")
 
                 )
         );
@@ -79,8 +79,8 @@ class WizardServiceTest {
 
         //THEN
         assertThat(actual, containsInAnyOrder(
-                new Wizard("testId1", "Nick", Gender.DIVERS, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.DILIGENT, "GRYFFINDOR")
-        ));
+                new Wizard("testId1","image", "Nick", Gender.DIVERS, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.DILIGENT, "GRYFFINDOR")
+                       ));
 
 
     }
@@ -88,7 +88,7 @@ class WizardServiceTest {
     @Test
     void delete() throws IllegalAccessException {
         //GIVEN
-        Wizard givenWizard = new Wizard("testId", "aaa", Gender.WITCHER, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.INTROVERT, "RAVENCLAW");
+        Wizard givenWizard = new Wizard("testId", "aaa","alala", Gender.WITCHER, Attribute1.AMBITIOUS, Attribute2.ASSERTIVE, Attribute3.INTROVERT, "RAVENCLAW");
         doNothing().when(wizardRepo).delete(givenWizard);
         when(wizardRepo.findById(givenWizard.id())).thenReturn(Optional.of(givenWizard));
 

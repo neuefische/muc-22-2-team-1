@@ -10,8 +10,7 @@ import {red} from "@mui/material/colors";
 type WizardCardProps = {
     wizard: NewWizard,
     house?: string,
-    removeWizard: (id: string) => void,
-   // showSelectedHouse: (id: string) => Promise<void>
+    removeWizard: (id: string) => void
 }
 
 
@@ -25,12 +24,6 @@ export default function WizardCard(props: WizardCardProps) {
     function onFlipCard() {
         setIsFlipped(prev => !prev);
     }
-    /*function onAsignHouseClick() {
-        props.showSelectedHouse(props.wizard.chosenHouse)
-
-    }*/
-
-    console.log(props.wizard);
 
     console.log(props.wizard);
 
@@ -77,7 +70,6 @@ export default function WizardCard(props: WizardCardProps) {
                                 <li>{props.wizard.chosenHouse}</li>
 
                             </ul>
-
                         </div>
                     </div>
                 </div>
