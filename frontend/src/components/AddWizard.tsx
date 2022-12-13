@@ -23,21 +23,13 @@ export default function AddWizard(props: AddWizardProps) {
 
     const [avatar, setAvatar] = useState<string>(createAvatar(style, {
         dataUri: true,
-        size: 256
-    }))
+        size: 256}))
     const [name, setName] = useState<string>("")
     const [gender, setGender] = useState<Gender | string>('')
     const [attribute1, setAttribute1] = useState<Attribute1 | string>('');
     const [attribute2, setAttribute2] = useState<Attribute2 | string>('')
     const [attribute3, setAttribute3] = useState<Attribute3 | string>('')
     const [chosenHouse, setChosenHouse] = useState<string>('')
-
-    function generateAvatar() {
-        setAvatar(createAvatar(style, {
-            dataUri: true,
-            size: 256
-        }))
-    };
 
 
     function generateAvatar() {
