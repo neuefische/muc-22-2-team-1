@@ -27,7 +27,7 @@ export default function LoginPage(props: LoginPageProps) {
 
         props.login(username, password)
             .then(user => {
-                navigate("/students")
+                navigate("/wizard-students")
             })
     }
 
