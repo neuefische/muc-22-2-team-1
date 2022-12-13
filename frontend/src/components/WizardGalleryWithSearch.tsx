@@ -1,4 +1,4 @@
-import {NewWizard, Wizard} from "../model/Wizard";
+import {NewWizard} from "../model/Wizard";
 import {ChangeEvent, useState} from "react";
 import {Grid, TextField} from "@mui/material";
 import WizardCard from "./WizardCard";

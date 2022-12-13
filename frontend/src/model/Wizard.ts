@@ -1,5 +1,3 @@
-import {MenuItem} from "@mui/material";
-
 export type Wizard = {
     avatar:string,
     id: string,

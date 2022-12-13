@@ -1,7 +1,6 @@
-import {NewWizard, Wizard} from "../model/Wizard";
-import {ChangeEvent, useState} from "react";
+import {NewWizard} from "../model/Wizard";
 import WizardCard from "./WizardCard";
-import {Grid, TextField} from "@mui/material";
+import {Grid} from "@mui/material";
 
 type WizardGalleryProps = {
     wizards: NewWizard []

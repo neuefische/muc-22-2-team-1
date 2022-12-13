@@ -1,4 +1,4 @@
-import {NewWizard, Wizard} from "../model/Wizard";
+import {NewWizard} from "../model/Wizard";
 import {useEffect, useState} from "react";
 import axios from "axios";
 

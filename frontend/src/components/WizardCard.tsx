@@ -6,7 +6,6 @@ import {useState} from "react";
 import {Button} from "@mui/material";
 
 
-
 type WizardCardProps = {
     wizard: NewWizard,
     house?: string,

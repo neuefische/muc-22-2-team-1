@@ -1,5 +1,4 @@
 import {Grid} from "@mui/material";
-import WizardGalleryApp from "./WizardGallery";
 
 export default function HausesGallery(){
     return (

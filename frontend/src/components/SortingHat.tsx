@@ -3,11 +3,6 @@ import sortingHat from '../assets/sorting_hat.jpeg';
 import './SortingHat.scss';
 import {Attribute1, Attribute2, Attribute3} from "../model/Wizard";
 import {useEffect, useState} from "react";
-import gryffindor from '../assets/gryffindor-wappe.png';
-import slytherin from '../assets/slytherin-wappe.png';
-import ravenclaw from '../assets/ravenclaw-wappe.png';
-import hufflepuff from '../assets/hufflepuff-wappe.png';
-import HousesCounter from "./HouseGallery";
 
 interface House {
     name: string;

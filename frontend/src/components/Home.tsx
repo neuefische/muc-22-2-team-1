@@ -7,7 +7,7 @@ export default function Home(){
             <p>Description</p>
             <p>You can create new wizards in our Wizard app and the new created wizard will be add
                 to one of four wizard houses after selecting process </p>
-            <img src={background}/>
+            <img src={background} alt={"background"}/>
             <Link to={"/speaking-hat"}>
                 <button> Create your own wizard jupiii!!!</button>
             </Link>

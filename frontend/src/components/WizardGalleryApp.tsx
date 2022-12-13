@@ -2,12 +2,11 @@ import useWizards from "../hooks/useWizards";
 import WizardGalleryWithSearch from "./WizardGalleryWithSearch";
 
 import {ReactNode} from "react";
-import HousesCounter from "./HouseGallery";
+import HouseGallery from "./HouseGallery";
 import gryffindor from "../assets/gryffindor-wappe.png";
 import ravenclaw from "../assets/ravenclaw-wappe.png";
 import hufflepuff from "../assets/hufflepuff-wappe.png";
 import slytherin from "../assets/slytherin-wappe.png";
-import HouseGallery from "./HouseGallery";
 import {Grid} from "@mui/material"; // Grid version 2
 function Item(props: { children: ReactNode }) {
     return null;

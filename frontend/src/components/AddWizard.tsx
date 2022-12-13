@@ -1,14 +1,4 @@
-import {
-    Button,
-    Container,
-    FormControl,
-    Grid,
-    InputLabel,
-    MenuItem,
-    Select,
-    SelectChangeEvent,
-    TextField
-} from "@mui/material";
+import {Button, Container, Grid, MenuItem, TextField} from "@mui/material";
 import {ChangeEvent, useState} from "react";
 import {Attribute1, Attribute2, Attribute3, Gender, NewWizard} from "../model/Wizard";
 import {createAvatar} from "@dicebear/avatars";
