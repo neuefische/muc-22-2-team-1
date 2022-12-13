@@ -12,10 +12,8 @@ import java.util.Optional;
 
 @Service
 public class WizardService {
-
     private final WizardRepo wizardRepo;
     private final IdService idService;
-
 
     @Autowired
     public WizardService(WizardRepo wizardRepo, IdService idService) {
@@ -35,7 +33,6 @@ public class WizardService {
         throw new IllegalAccessException("Id not found");
     }
 
-
     public Wizard addWizard(Wizard wizard) {
         String id = idService.generateId();
         Wizard wizardWithId = wizard.withId(id);
@@ -50,7 +47,6 @@ public class WizardService {
                 searchResultList.add(wizard);
             }
         }
-
         return searchResultList;
     }
 
@@ -60,8 +56,6 @@ public class WizardService {
     }
 
     public String selectHouse(Wizard wizard) {
-
-
         int[] houseScore = new int[4];
 
 
@@ -99,9 +93,9 @@ public class WizardService {
         int maxScoreIndex = scoreIndex;
 
         String[] houses = {"GRYFFINDOR", "HUFFLEPUFF", "RAVENCLAW", "SLYTHERIN"};
-        //test123 test123
-
+        //l
         return houses[maxScoreIndex];
+
 
     }
 }
