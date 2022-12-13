@@ -85,7 +85,7 @@ export default function WizardCard(props: WizardCardProps) {
             <p>{props.wizard.avatar}</p>
             <Button onClick={onDeleteClick}>Delete</Button>
             <Button onClick={onFlipCard}>Flip</Button>
-            <Button >Assign a house</Button>
+
         </div>
     )
 }
